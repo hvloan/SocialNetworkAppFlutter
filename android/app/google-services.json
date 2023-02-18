@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712935678121",
+    "project_id": "socialnetworkflutter-2ceab",
+    "storage_bucket": "socialnetworkflutter-2ceab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712935678121:android:ee4a659ef75222b82e09b8",
+        "android_client_info": {
+          "package_name": "vn.com.hvloan.social_network_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712935678121-27p5q1sn4q51dp4qh6ll1m910mska3ia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhRv4u3W_Qd_kdp7Nq76plg8KV6A7x8js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712935678121-27p5q1sn4q51dp4qh6ll1m910mska3ia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:social_network_app/screens/splash_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // init app based on platform- web or mobile
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyDIsbqfF8S0Onwb1edjTH4FS3DSrI0lKVo",
+          authDomain: "socialnetworkflutter-2ceab.firebaseapp.com",
+          projectId: "socialnetworkflutter-2ceab",
+          storageBucket: "socialnetworkflutter-2ceab.appspot.com",
+          messagingSenderId: "712935678121",
+          appId: "1:712935678121:web:21e766095a06ba492e09b8",
+          measurementId: "G-TEJVXZ4XN0"),
+    );
+  } else {
+    await Firebase.initializeApp();
+  }
   runApp(const MyApp());
 }
 
@@ -12,17 +31,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Social Network App',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const SplashScreen(),
